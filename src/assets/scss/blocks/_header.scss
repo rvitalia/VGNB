@@ -1,0 +1,32 @@
+
+.header__top__item{
+    &>a{
+        transition: color 0.3s linear;
+
+        &:hover{
+            color: var(--accent-color);
+        }
+    }
+
+    & button{
+        color: var(--accent-color);
+        transition: color 0.3s linear;
+    
+        &:hover{
+            color: white;
+        }
+    }
+
+} 
+
+.header__bottom li{
+    padding: 10px 15px;
+    border-color: transparent;
+    transition: all 0.3s linear;
+    border-radius: 15px;
+
+    &:hover{
+        background-color: var(--accent-color);
+        color: black;
+    }
+}

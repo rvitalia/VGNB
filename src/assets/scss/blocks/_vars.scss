@@ -1,0 +1,17 @@
+:root {
+  // base
+  --font-family: "Montserrat", sans-serif;
+  --second-family: "Benzin-Bold", sans-serif;
+  --third-family: "Benzin-ExtraBold", sans-serif;
+
+  --content-width: 1265px;
+  --content-fluid-width: 1690px;
+  --container-offset: 30px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  --container-fluid-width: calc(var(--content-fluid-width) + (var(--container-offset) * 2));
+
+  // colors
+  --light-color: #fff;
+  --accent-color: #ffe300;
+  --link-color: #eeece8;
+}

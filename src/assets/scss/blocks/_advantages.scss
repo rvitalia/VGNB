@@ -1,0 +1,20 @@
+.advantages {
+    border-right: 32px solid var(--accent-color);
+    border-left: 32px solid var(--accent-color);
+    background: #fffcfc;
+}
+
+.advantages__inner {
+
+    & h3, & p{
+        position: relative;
+        z-index: 1;
+    }
+
+    & strong {
+        font-family: var(--second-family);
+        line-height: 35%;
+        letter-spacing: 0.02em;
+        color: rgba(255, 227, 0, 0.4);
+    }
+}

@@ -1,0 +1,45 @@
+// @import 'vendor/reset';
+@import 'blocks/vars';
+@import 'mixins';
+// @import "./vendor/animate";
+
+
+// @import 'fonts';
+@import 'settings';
+
+
+html,body{
+  height: 100%;
+   margin: 0;
+   font-family: var(--font-family);
+   color: #fff;
+   font-weight: 400;
+   font-size: 16px;
+}
+
+.main{
+  height: 100%;
+  flex: 1 0 auto; 
+}
+
+// ======blocks=========
+
+@import 'blocks/container';
+@import 'blocks/page';
+@import 'blocks/header';
+// first-page
+@import 'blocks/hero';
+@import 'blocks/advantages';
+@import 'blocks/services';
+@import 'blocks/vgnb';
+@import 'blocks/price';
+@import 'blocks/calculator';
+
+// end first page
+@import 'blocks/footer';
+
+
+
+
+
+

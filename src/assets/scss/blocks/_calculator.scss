@@ -1,0 +1,64 @@
+.calculator__title__circul{
+    background-color: var(--accent-color);
+}
+
+.calculator{
+    position: relative;
+
+    &:before{
+        content: "";
+        // width: 100%;
+        // height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 50%;
+        z-index: 0;
+        background-color: white;
+    }
+
+    & *{
+        position: relative;
+        z-index: 1;
+    }
+}
+
+.calculator__circul{
+    fill: #A0A0A0;
+}
+
+/* Для WebKit (Chrome, Safari, Opera) */
+input[type=range]::-webkit-slider-runnable-track {
+    background-color: #d9d9d9; /* неактивный цвет */
+    height: 5px; /* толщина ползунка */
+  }
+  
+  /* Для Gecko (Firefox) */
+  input[type=range]::-moz-range-track {
+    background-color: #d9d9d9; /* неактивный цвет */
+    height: 5px; /* толщина ползунка */
+  }
+  
+  /* Для Edge */
+  input[type=range]::-ms-track {
+    background-color: #d9d9d9; /* неактивный цвет */
+    height: 5px; /* толщина ползунка */
+  }
+  
+  /* Для WebKit (Chrome, Safari, Opera) */
+  input[type=range]::-webkit-slider-thumb {
+    background-color: #FFE300; /* активный цвет слева */
+  }
+  
+  /* Для Gecko (Firefox) */
+  input[type=range]::-moz-range-thumb {
+    background-color: #FFE300; /* активный цвет слева */
+  }
+  
+  /* Для Edge */
+  input[type=range]::-ms-thumb {
+    background-color: #FFE300; /* активный цвет слева */
+  }
+  
+  
