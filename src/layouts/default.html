@@ -16,6 +16,17 @@
 
     </div>
     <script src="assets/js/app.js"></script>
-</body>
-</html>
+    <script>
+        function toggleAccordion(header) {
+            var content = header.nextElementSibling;
+            let container = header.closest('.accordion');
+            var icon = header.querySelector('.accordion-icon');
+            content.style.display = content.style.display === 'block' ? 'none' : 'block';
+            icon.classList.toggle('active');
+            container.classList.toggle('active');
+        }
 
+    </script>
+</body>
+
+</html>

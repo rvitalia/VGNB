@@ -1,0 +1,43 @@
+.vacancy__inner {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    column-gap: 50px;
+}
+
+.vacancy__inner__data {
+    & h3 {
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 136%;
+        color: #000;
+    }
+
+    & span {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 190%;
+        color: #000;
+        display: block;
+        padding: 10px 0;
+    }
+
+    & p {
+        line-height: 150%;
+        color: #000;
+    }
+
+    & ul {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 200%;
+        color: #000;
+    }
+}
+
+.vacancy__link{
+    margin: 0 auto;
+    max-width: max-content;
+}

@@ -1,0 +1,23 @@
+.clients {}
+
+.clients__subtitle {}
+
+.clients__list {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 136%;
+    color: #000;
+
+    & li{
+        display: flex;
+        column-gap: 20px;
+        align-items: center;
+
+        & .calculator__title__circul{
+            flex-shrink: 0;
+            transform: rotate(-90deg);
+        }
+    }
+}
+
+.calculator__title__circul {}

@@ -1,0 +1,76 @@
+.about__adventages {
+    position: relative;
+    margin: 60px 0;
+    display: block;
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #000;
+
+    &::before {
+        width: 64px;
+        height: 17px;
+        background: #ffe300;
+        content: "";
+        position: absolute;
+        left: -20px;
+        z-index: 1;
+        transform: translateX(-100%);
+    }
+}
+
+.accordion {
+    transition: all 0.3s linear;
+
+    &.active {
+        background-color: white;
+    }
+}
+
+.accordion-item {
+    border-bottom: 1px solid #ddd;
+    font-size: 28px;
+    line-height: 136%;
+    color: #000;
+    padding: 30px 0;
+}
+
+.accordion-header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 136%;
+    color: #000;
+}
+
+.accordion-content {
+    display: none;
+    padding: 10px;
+    font-size: 20px;
+    line-height: 140%;
+    color: #000;
+}
+
+.accordion-icon {
+    margin-right: 10px;
+    margin-left: auto;
+    transition: all 0.3s linear;
+
+    &.active {
+        transform: rotate(45deg);
+    }
+}
+
+.accordion-item.active .accordion-content {
+    display: block;
+}
+
+.about__text {
+    padding-top: 35px;
+    font-size: 28px;
+    line-height: 136%;
+    color: #000;
+}
