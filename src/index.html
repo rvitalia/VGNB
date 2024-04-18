@@ -639,7 +639,7 @@ title: VGNB
 </section>
 
 <section class="vacancy  section pt110" style="background: #eeece8;">
-    <div class="container">
+    <div class="container" style="padding-bottom: 110px;">
         <a href="#" class="small_link" style="max-width: max-content;">Вакансии<img
                 src="./assets/images/services/arrow.svg" alt="arrow" width="15" height="15"></a>
 
@@ -676,9 +676,33 @@ title: VGNB
             </div>
         </div>
 
-        <div class="vacancy__link">
+        <div class="vacancy__link" style="position: relative; z-index: 1;">
             <a href="#" class="small_link" style="max-width: max-content;">ПОКАЗАТЬ ЕЩЕ БОЛЬШЕ ВАКАНСИЙ<img
                     src="./assets/images/services/arrow.svg" alt="arrow" width="15" height="15"></a>
         </div>
     </div>
+</section>
+
+<section class="order pt110 section" style="background: #fff;position: relative;">
+    <div class="container order__inner" style="display: grid; grid-template-columns: repeat(auto-fit,minmax(350px, 1fr));column-gap: 90px;">
+        <div class="order__inner__form">
+            <h2 class="project__title h-reset" style="font-size: 35px; padding-bottom: 35px;">Оставить заявку</h2>
+            <form action="">
+                <div class="order__inner__form__column">
+                    <input type="text" class="order__input" placeholder="Ваше имя:">
+                    <input type="tel" class="order__input" placeholder="Ваш Телефон:">
+                    <input type="submit" class="order__submit" value="Отправить">
+                </div>
+            </form>
+            <p style="font-size: 12px;line-height: 133%;color: #666; max-width: 505px; margin-top: 30px;">Нажимая на кнопку, Вы даете согласие на обработку своих персональных данных (в целях соблюдения норм Федерального закона "О персональных данных" от 27.07.2006 N 152-ФЗ)</p>
+        </div>
+        <div class="order__inner__form">
+            <div class="order__inner__form__data" style="padding: 50px 120px; color: #000; text-align: center; border-radius: 30px;position: relative; z-index: 1; backdrop-filter: blur(20px); background: rgba(255, 227, 0, 0.8);">
+                <p>г. Москва, <br> ул. Намёткина-разметкина, 12А </p>
+                <a href="tel:+74951516485" style="display: flex; column-gap: 5px; align-items: center; white-space: nowrap; margin-bottom: 30px;"><img src="./assets/images/order/Phone.svg" alt="phone" width="32" height="32">+7 (495) 151-64-85</a>
+                <a href="mailto:info@gnbserv.ru" class="order__inner__form__data__mail">info@gnbserv.ru</a>
+            </div>
+        </div>
+    </div>
+    <img src="./assets/images/order/order.svg" alt="logo" width="761" height="748" style="position: absolute; right: 4%;top: -45%; z-index: 0;" >
 </section>
