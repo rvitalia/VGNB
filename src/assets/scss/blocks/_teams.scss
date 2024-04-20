@@ -1,0 +1,10 @@
+.teams {
+    padding-bottom: 110px;
+    @include bg-cover;
+
+    & p {
+        font-size: 28px;
+        line-height: 136%;
+        color: #fff;
+    }
+}

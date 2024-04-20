@@ -1,0 +1,35 @@
+.vacancy__search {
+    padding: 10px 15px;
+    background: transparent;
+    font-size: 24px;
+    letter-spacing: 0.02em;
+    color: rgba(0, 0, 0, 0.3);
+    border: none;
+}
+
+.vacancy__submit {
+    border: none;
+    background: transparent;
+}
+
+.vabout__inner form {
+    display: grid;
+    grid-template-columns: 1fr 52px;
+    width: 100%;
+    background: white;
+    border: 1px solid #c8c8c8;
+    cursor: pointer;
+    font-size: 24px;
+    color: transparent;
+    margin-bottom: 60px;
+}
+
+.vabout__inner {
+    p {
+        padding-top: 20px;
+        font-size: 32px;
+        line-height: 119%;
+        color: #000;
+        text-indent: 60px;
+    }
+}

@@ -1,0 +1,63 @@
+.vaclist {
+
+    color: #000;
+
+    &>ul>li{
+        padding: 60px 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    li {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 50px;
+
+        & h3 {
+            font-weight: 600;
+            font-size: 28px;
+            line-height: 136%;
+            margin-bottom: 0;
+            margin-top: 15px;
+        }
+
+        & h4 {
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 190%;
+            margin-top: 10px;
+            margin-bottom: 0;
+        }
+
+        & p {
+            line-height: 150%;
+            margin-top: 20px;
+        }
+
+        & li {
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 200%;
+            position: relative;
+
+            &::after{
+                width: 8px;
+                height: 8px;
+                content: "";
+                position: absolute;
+                left: -27px;
+                top: 10px;
+                z-index: 1;
+                background-color: currentColor;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    .vaclist__text__link{
+        margin-left: auto;
+        margin-top: 10px;
+        max-width: max-content;
+    }
+
+
+}

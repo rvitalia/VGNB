@@ -1,0 +1,40 @@
+.questions {
+    @include bg-cover;
+    padding-bottom: 110px;
+
+    & h2 {
+        font-family: var(--second-family);
+        font-size: 36px;
+        line-height: 194%;
+        letter-spacing: 0.02em;
+        color: #fff;
+    }
+}
+
+.questions__inner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.questions__inner__social {
+    font-size: 32px;
+    line-height: 119%;
+    color: #fff;
+    padding-top: 20px;
+
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 60px;
+
+    ul {
+        display: flex;
+        gap: 10px;
+     }
+}
+
+.questions__inner__link{
+    display: flex;
+    gap: 40px;
+}

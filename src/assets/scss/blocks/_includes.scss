@@ -1,0 +1,40 @@
+.includes__inner {
+    padding-bottom: 90px;
+
+    & p {
+        font-size: 28px;
+        line-height: 136%;
+        color: #000;
+    }
+}
+
+.includes__inner__equipment__image {
+    max-height: 220px;
+    // max-width: 220px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    border-radius: 30px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 30px;   
+
+    & img{
+        transform: scale(1.1);
+        max-height: 100%;
+        max-width: 100%;
+        object-fit: contain;
+    }
+}
+
+.includes__inner__equipment {
+    & p {
+        font-size: 20px;
+        line-height: 190%;
+        color: #000;
+        margin-top: 15px;
+    }
+}

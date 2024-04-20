@@ -1,7 +1,37 @@
-<footer style="background: #eeece8;">
+<footer class="section" style="background: #eeece8; width:  100%;">
     <div class="container">
         <div class="footer__inner" style="padding: 45px 0 100px; color: #3b3a39;">
             <p class="copyright">© VGNB.ru, 2005 – 2023</p>
         </div>
     </div>
 </footer>
+
+<script defer>
+    const menu = document.querySelector('[data-mobile]');
+    const burger = document.querySelector('.burger-button');
+    const close = document.querySelector('[data-close]');
+    const links = menu.querySelectorAll('a');
+    function closeMenu(){
+        menu.style.transform = 'rotateY(90deg)';
+        setTimeout(() => {
+            burger.classList.remove('open');
+            menu.classList.remove('active');
+        }, 300);
+    }
+    burger.addEventListener('click', function () {
+        burger.classList.add('open');
+        menu.classList.add('active');
+        setTimeout(() => {
+            menu.style.transform = 'rotateY(0)';
+        }, 300);
+    });
+    close.addEventListener('click', ()=>{
+       closeMenu();
+    })
+    links.forEach(element => {
+        element.addEventListener('click',()=>{
+            closeMenu();
+        })
+    });
+
+</script>

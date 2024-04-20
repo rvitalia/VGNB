@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    {{> head }}
+</head>
+
+<body>
+    <div class="page">
+        {{> header }}
+
+        <main class="main">
+            {{> body }}
+        </main>
+        {{> footer }}
+
+    </div>
+    <script>
+        document.querySelectorAll('.toggleButton').forEach(function (button, index) {
+            button.addEventListener('click', function () {
+                var table = document.querySelectorAll('.toggleTable')[index];
+                if (table.classList.contains('none')) {
+                    table.classList.remove('none')
+                    table.classList.add('visible');
+                    setTimeout(() => {
+                        table.classList.add('animation');
+                    }, 150);
+                } else {
+                    table.classList.remove('animation');
+                    setTimeout(() => {
+                        table.classList.remove('visible');
+                        table.classList.add('none');
+                    }, 400);
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,159 @@
+.technika {}
+
+.technika__inner {
+
+    &>li {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+}
+
+.technika__inner__main {
+    & h4 {
+        border-radius: 140px;
+        padding: 11px 15px 11px 20px;
+        background: #3b3a39;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 100%;
+        text-transform: uppercase;
+        color: #fff;
+        display: block;
+        margin-bottom: 40px;
+        max-width: max-content;
+    }
+}
+
+.technika__inner__main__img {
+    border-radius: 30px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.technika__inner__main__price {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 292%;
+    letter-spacing: 0.02em;
+    color: #ffe300;
+    margin-top: 30px;
+    display: block;
+    text-align: center;
+    background-color: white;
+    border-radius: 30px;
+}
+
+.technika__inner__info {
+    & strong {
+        font-family: var(--second-family);
+        font-size: 24px;
+        line-height: 292%;
+        letter-spacing: 0.02em;
+    }
+
+    & p {
+        font-size: 20px;
+        line-height: 190%;
+        margin-bottom: 0;
+    }
+
+    & ul {
+        list-style: disc;
+        font-size: 20px;
+        line-height: 190%;
+        margin: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    & button {
+        background: none;
+        border: none;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        margin: 20px 0;
+        cursor: pointer;
+    }
+}
+
+.technika__inner__info__table {
+    background: #fff;
+    border-radius: 30px;
+    padding: 60px;
+    width: 100%;
+
+    & th,
+    & td {
+        padding: 15px 0;
+    }
+
+    & th {
+        font-family: var(--third-family);
+        font-size: 20px;
+        line-height: 190%;
+        color: #000;
+        font-weight: 600;
+        border-bottom: 1px solid var(--accent-color);
+        border-right: 1px solid var(--accent-color);
+
+        &:last-child{
+            border-right-color: transparent;
+        }
+
+        &:not(:first-child){
+            padding-left: 10px;
+        }
+    }
+    
+    & tr {
+        
+        &:last-child{
+            & td{
+                border-bottom: 1px solid transparent;
+            }
+        }
+        
+        & td:first-child {
+            font-weight: 600;
+        }
+        
+        & td {
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 190%;
+            border-bottom: 1px solid var(--accent-color);
+            border-right: 1px solid var(--accent-color);
+      
+            &:not(:first-child){
+                padding-left: 10px;
+            }
+            
+            &:last-child{
+                border-right-color: transparent;
+            }
+        }
+    }
+}
+
+.toggleTable {
+    transform-origin: 0 0;
+    transform: rotateX(90deg);
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear, transform 0.5s linear;
+}
+
+.toggleTable.visible {
+    visibility: visible;
+    opacity: 1;
+}
+.toggleTable.animation{
+    transform: rotateX(0deg);
+}
+
+.none{
+    display: none;
+}

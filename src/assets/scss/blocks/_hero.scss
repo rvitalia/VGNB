@@ -6,8 +6,6 @@
 
 .hero__inner {}
 
-.h-reset {}
-
 .hero__inner__title {
     font-family: var(--third-family);
 
@@ -21,9 +19,9 @@
 .hero__inner__order {
     background: white;
     border-radius: 30px;
-    padding: 30px;
+    padding: clamp(20px, 4vw, 30px);
     font-weight: 600;
-    font-size: 28px;
+    font-size: clamp(20px, 4vw, 28px);
     line-height: 57%;
     text-align: center;
     color: #000;
@@ -37,5 +35,11 @@
         color: white;
         background-color: transparent;
         border-color: #fff;
+    }
+}
+
+.hero__inner__text{
+    @include small-tablet{
+        padding-top: 30px;
     }
 }

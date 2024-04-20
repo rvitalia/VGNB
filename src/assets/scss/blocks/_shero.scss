@@ -1,0 +1,30 @@
+.shero {
+    padding-top: 200px;
+    padding-bottom: 150px;
+    @include bg-cover;
+}
+
+.shero__inner {
+
+    & h1 {
+        font-family: var(--second-family);
+        font-size: 50px;
+        line-height: 130%;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        color: #fff;
+        padding-bottom: 20px;
+    }
+
+    & p {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 190%;
+        color: #fff;
+
+        & a {
+            font-weight: 700;
+        }
+    }
+}

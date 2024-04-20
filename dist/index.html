@@ -4,7 +4,10 @@
 <head>
     <meta charset="UTF-8">
     
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="assets/css/style.css">
+    
     
     <!-- Useful meta tags -->
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -15,15 +18,14 @@
     <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <title>VGNB</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     
-    
-</head>
+    <title>VGNB</title></head>
 
 <body>
     <div class="page">
-        <header style="position: absolute; top: 0; left: 0; right: 0;">
+        <header style="position: absolute; top: 0; left: 0; right: 0; padding: 0 15px;">
             <div class="header__top container"
                 style="display: flex; justify-content: space-between; align-items: center; padding: 35px 0;">
                 <div class="header__top__item" style="display: flex; align-items: center; column-gap: 30px;">
@@ -31,29 +33,72 @@
                     <p class="h-reset" style="font-size: 10px; text-transform: uppercase; line-height: 150%;">
                         Горизонтально-направленное бурение <span style="display: block;">в Москве и области</span></p>
                 </div>
-                <div class="header__top__item" style="display: flex; flex-direction: column; align-items: center;">
-                    <a href="tel:+74951516485" style="font-weight: 800; font-size: 20px; line-height: 143%;">+7 (495) 151-64-85</a>
-                    <button class="btn-reset" style="font-weight: 600; text-transform: uppercase; text-decoration: underline;">ЗАКАЗАТЬ
-                        ЗВОНОК</button>
+                <div class="header__top__wrapper">
+                    <div class="header__top__item" style="display: flex; flex-direction: column; align-items: center;">
+                        <a href="tel:+74951516485" style="font-weight: 800; font-size: 20px; line-height: 143%;">+7 (495)
+                            151-64-85</a>
+                        <button class="btn-reset"
+                            style="font-weight: 600; text-transform: uppercase; text-decoration: underline;">ЗАКАЗАТЬ
+                            ЗВОНОК</button>
+                    </div>
+                    <button class="burger-button">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </button>
                 </div>
             </div>
-            <ul class="list-reset header__bottom container" style="font-weight: 800; line-height: 100%; text-transform: uppercase; display: flex; justify-content: space-between; column-gap: 20px; align-items: center;">
+            <ul class="list-reset header__bottom container"
+                style="font-weight: 800; line-height: 100%; text-transform: uppercase; display: flex; justify-content: space-between; column-gap: 20px; align-items: center;">
                 <li><a href="">Услуги</a></li>
                 <li><a href="">Цены</a></li>
                 <li><a href="">Калькулятор</a></li>
-                <li><a href="">Фото работ</a></li>
-                <li><a href="">О компании</a></li>
-                <li><a href="">Контакты</a></li>
+                <li class="menu-item-has-children"><a href="./spectechnika.html">Спецтехника</a>
+                    <ul class="submenu">
+                        <li><a href="./spectechnika.html">МАНИПУЛЯТОРЫ</a></li>
+                        <li><a href="./spectechnika.html">ПОГРУЗЧИКИ</a></li>
+                        <li><a href="./spectechnika.html">ЭКСКАВАТОРЫ</a></li>
+                        <li><a href="./spectechnika.html">САМОСВАЛЫ</a></li>
+                        <li><a href="./spectechnika.html">ДРУГАЯ ТЕХНИКА</a></li>
+                    </ul>
+                </li>
+                <li><a href="./about.html">О компании</a></li>
+                <li><a href="./vacancy.html">Вакансии</a></li>
+            </ul>
+            <ul class="mobile__burger list-reset" data-mobile>
+                <li>
+                    <button class="burger-button-mobile open" data-close>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </button>
+                </li>
+                <li style="margin-bottom: 30px;"><a href="#"><img src="./assets/images/header/logo.svg" alt="logo" width="113" height="36"></a></li>
+                <li><a href="">Услуги</a></li>
+                <li><a href="">Цены</a></li>
+                <li><a href="">Калькулятор</a></li>
+                <li class="menu-item-has-children"><a href="./spectechnika.html">Спецтехника</a>
+                    <ul class="submenu">
+                        <li><a href="./spectechnika.html">МАНИПУЛЯТОРЫ</a></li>
+                        <li><a href="./spectechnika.html">ПОГРУЗЧИКИ</a></li>
+                        <li><a href="./spectechnika.html">ЭКСКАВАТОРЫ</a></li>
+                        <li><a href="./spectechnika.html">САМОСВАЛЫ</a></li>
+                        <li><a href="./spectechnika.html">ДРУГАЯ ТЕХНИКА</a></li>
+                    </ul>
+                </li>
+                <li><a href="./about.html">О компании</a></li>
+                <li><a href="./vacancy.html">Вакансии</a></li>
+                <!-- <li><a href="tel:+74951516485">+7 (495)151-64-85</a></li> -->
             </ul>
         </header>
         <main class="main">
             <section class="section hero" style="background-image: url(./assets/images/header/bg.png);">
                 <div class="container hero__inner">
                     <h1 class="h-reset hero__inner__title"
-                        style="padding-top: 300px; padding-bottom: 10px; font-size: 50px; line-height: 130%; letter-spacing: 0.02em;">
+                        style="padding-top: clamp(230px, 20vw, 300px); padding-bottom: 10px; font-size: clamp(32px,5vw,50px); line-height: 130%; letter-spacing: 0.02em;">
                         ГНБ установки с оператором <span style="display: block;">по Москве и области</span>
                     </h1>
-                    <h2 class="h-reset hero__inner__text" style="font-size: 28px; line-height: 136%; padding-bottom: 50px;">
+                    <h2 class="h-reset hero__inner__text" style="font-size: clamp(22px, 3vw, 28px); line-height: 136%; padding-bottom: 50px;">
                         Установки горизонтально-направленного бурения <span style="display: block;">из собственного парка техники с
                             оператором:</span> </h2>
                     <button class="btn-reset hero__inner__order">Вызвать установку <img src="./assets/images/header/arrow.svg"
@@ -752,13 +797,43 @@
                 <img src="./assets/images/order/order.svg" alt="logo" width="761" height="748" style="position: absolute; right: 4%;top: -45%; z-index: 0;" >
             </section>
         </main>
-        <footer style="background: #eeece8;">
+        <footer class="section" style="background: #eeece8; width:  100%;">
             <div class="container">
                 <div class="footer__inner" style="padding: 45px 0 100px; color: #3b3a39;">
                     <p class="copyright">© VGNB.ru, 2005 – 2023</p>
                 </div>
             </div>
         </footer>
+        
+        <script defer>
+            const menu = document.querySelector('[data-mobile]');
+            const burger = document.querySelector('.burger-button');
+            const close = document.querySelector('[data-close]');
+            const links = menu.querySelectorAll('a');
+            function closeMenu(){
+                menu.style.transform = 'rotateY(90deg)';
+                setTimeout(() => {
+                    burger.classList.remove('open');
+                    menu.classList.remove('active');
+                }, 300);
+            }
+            burger.addEventListener('click', function () {
+                burger.classList.add('open');
+                menu.classList.add('active');
+                setTimeout(() => {
+                    menu.style.transform = 'rotateY(0)';
+                }, 300);
+            });
+            close.addEventListener('click', ()=>{
+               closeMenu();
+            })
+            links.forEach(element => {
+                element.addEventListener('click',()=>{
+                    closeMenu();
+                })
+            });
+        
+        </script>
     </div>
     <script src="assets/js/app.js"></script>
     <script>

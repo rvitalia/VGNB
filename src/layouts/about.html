@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    {{> head }}
+</head>
+
+<body>
+    <div class="page">
+        {{> header }}
+
+        <main class="main">
+            {{> body }}
+        </main>
+        {{> footer }}
+
+    </div>
+    <!-- <script src="assets/js/app.js"></script> -->
+    <script defer>
+        window.addEventListener('DOMContentLoaded', () => {
+            const swiper = new Swiper('.swiper__aadventages', {
+                // Optional parameters
+
+                // If we need pagination
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+
+                // Navigation arrows
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+        })
+
+    </script>
+</body>
+
+</html>
