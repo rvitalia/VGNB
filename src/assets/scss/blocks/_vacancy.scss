@@ -1,6 +1,6 @@
 .vacancy__inner {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: clamp(40px, 4vw, 60px);
+    padding-bottom: clamp(40px, 4vw, 60px);
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -12,25 +12,41 @@
 }
 
 .vacancy__inner__data {
+    position: relative;
+    z-index: 1;
+    
     & h3 {
         font-weight: 600;
-        font-size: 28px;
+        font-size: clamp(20px, 3.5vw, 28px);
         line-height: 136%;
         color: #000;
+
+        @include small-tablet{
+            margin: 10px 0;
+        }
     }
 
     & span {
         font-weight: 600;
-        font-size: 20px;
+        font-size: clamp(18px, 3.5vw, 20px);
         line-height: 190%;
         color: #000;
         display: block;
         padding: 10px 0;
+
+        @include small-tablet{
+            line-height: 150%;
+        }
     }
 
     & p {
         line-height: 150%;
         color: #000;
+
+        @include small-tablet{
+            font-size: 14px;
+            margin: 0;
+        }
     }
 
     & ul {

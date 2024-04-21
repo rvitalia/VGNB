@@ -1,12 +1,17 @@
 .advantages {
-    border-right: 32px solid var(--accent-color);
-    border-left: 32px solid var(--accent-color);
+    border-right: clamp(15px, 4vw, 32px) solid var(--accent-color);
+    border-left: clamp(15px, 4vw, 32px) solid var(--accent-color);
     background: #fffcfc;
 }
 
 .advantages__inner {
 
-    & h3, & p{
+    @include mobile{
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+    }
+
+    & h3,
+    & p {
         position: relative;
         z-index: 1;
     }
@@ -16,5 +21,34 @@
         line-height: 35%;
         letter-spacing: 0.02em;
         color: rgba(255, 227, 0, 0.4);
+        font-size: clamp(150px, 4vw, 200px);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+        z-index: 0;
+        max-width: min-content;
+    }
+
+    & h3 {
+        font-weight: 600;
+        font-size: clamp(18px, 4vw, 24px);
+        color: black;
+        padding-bottom: clamp(15px, 4vw, 20px);
+        padding-top: clamp(30px, 4vw, 50px);
+        text-align: center;
+    }
+
+    & p {
+        line-height: 237%;
+        max-width: 380px;
+        margin-right: auto;
+        margin-left: auto;
+        color: #000;
+        text-align: center;
+
+        @include mobile {
+            font-size: 14px;
+        }
     }
 }

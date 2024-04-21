@@ -11,6 +11,11 @@
         font-weight: 400;
         line-height: 100%;
         color: #3b3a39;
+
+        &:active, &:focus{
+            outline: none;
+            border: 1px solid var(--accent-color);
+        }
     }
 
     & .order__submit {
@@ -35,9 +40,17 @@
 .order__inner__form__data {
     color: #000;
 
+    @media(max-width:1350px){
+        padding: 20px 20px !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
     & p {
         font-weight: 500;
-        font-size: 20px;
+        font-size: clamp(14px, 4vw, 20px);
         line-height: 136%;
         letter-spacing: 0.02em;
         text-transform: uppercase;
@@ -46,7 +59,7 @@
 
     & a {
         font-family: var(--second-family);
-        font-size: 30px;
+        font-size: clamp(20px, 4vw, 30px);
         line-height: 95%;
         text-align: center;
     }
@@ -60,4 +73,43 @@
     letter-spacing: 0.02em;
     text-transform: uppercase;
     text-align: center;
+}
+
+.order{
+
+    & img{
+        @include for-desktop{
+            left: 15% !important;
+            opacity: 0.8;
+        }
+
+        @include tablet{
+            top: -200px !important;
+            left: 50% !important;
+            transform: translateX(-50%);
+        }
+        
+        @include small-tablet{
+            top: -175px !important;
+        }
+        @include mobile{
+            top: -150px !important;
+        }
+        @include small-mobile{
+            top: -125px !important;
+        }
+    }
+}
+
+.order__inner__form{
+    position: relative;
+    z-index: 1;
+}
+
+.order__inner{
+    @include tablet{
+        display: flex !important;
+        flex-direction: column;
+        padding-bottom: 40px;
+    }
 }

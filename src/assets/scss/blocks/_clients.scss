@@ -4,7 +4,7 @@
 
 .clients__list {
     font-weight: 500;
-    font-size: 28px;
+    font-size: clamp(16px, 3vw, 28px);
     line-height: 136%;
     color: #000;
 
@@ -16,8 +16,65 @@
         & .calculator__title__circul{
             flex-shrink: 0;
             transform: rotate(-90deg);
+
+            @include tablet{
+                width: 30px !important;
+                height: 30px !important;
+            }
+
+            & img{
+                position: relative;
+                top: 2px;
+
+                @include tablet{
+                    width: 12px;
+                    height: 12px;
+                }
+            }
         }
     }
 }
 
 .calculator__title__circul {}
+
+.clients__items{
+    & li{
+        @include tablet{
+            display: block !important;
+            position: relative;
+        }
+
+        & .clients__items__left{
+            position: relative;
+            z-index: 1;
+
+            @include mobile{
+                &>a{
+                    max-width: 200px;
+                    display: block;
+                }
+
+                & p{
+                    font-size: 16px;
+                    line-height: 1.5;
+                }
+            }
+        }
+
+        & .clients__items__right{
+            @include tablet{
+                position: absolute;
+                inset: 0;
+                z-index: 0;
+                opacity: 0.3;
+                overflow: hidden;
+                display: flex;
+                align-items: flex-end;
+                
+                & img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

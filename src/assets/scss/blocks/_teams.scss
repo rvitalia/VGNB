@@ -1,9 +1,9 @@
 .teams {
-    padding-bottom: 110px;
+    padding-bottom: clamp(40px, 6vw ,110px);
     @include bg-cover;
 
     & p {
-        font-size: 28px;
+        font-size: clamp(20px, 5vw, 28px);
         line-height: 136%;
         color: #fff;
     }

@@ -1,8 +1,8 @@
 .includes__inner {
-    padding-bottom: 90px;
+    padding-bottom: clamp(40px,5vw,90px);
 
     & p {
-        font-size: 28px;
+        font-size: clamp(20px, 4.5vw, 28px);
         line-height: 136%;
         color: #000;
     }

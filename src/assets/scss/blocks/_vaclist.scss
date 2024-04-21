@@ -3,18 +3,22 @@
     color: #000;
 
     &>ul>li{
-        padding: 60px 0;
+        padding: clamp(40px, 5.5vw, 60px) 0;
         border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     }
 
     li {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
         gap: 50px;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        
+        @include mobile{
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
 
         & h3 {
             font-weight: 600;
-            font-size: 28px;
+            font-size: clamp(24px, 4vw, 28px);
             line-height: 136%;
             margin-bottom: 0;
             margin-top: 15px;
@@ -22,8 +26,8 @@
 
         & h4 {
             font-weight: 600;
-            font-size: 20px;
-            line-height: 190%;
+            font-size: clamp(18px, 4vw,  20px);
+            line-height: clamp(150%, 4vw ,190%);
             margin-top: 10px;
             margin-bottom: 0;
         }
@@ -57,6 +61,8 @@
         margin-left: auto;
         margin-top: 10px;
         max-width: max-content;
+        position: relative;
+        z-index: 1;
     }
 
 

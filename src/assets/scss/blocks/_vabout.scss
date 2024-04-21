@@ -27,9 +27,13 @@
 .vabout__inner {
     p {
         padding-top: 20px;
-        font-size: 32px;
+        font-size: clamp(20px, 4vw, 32px);
         line-height: 119%;
         color: #000;
         text-indent: 60px;
+
+        @include mobile{
+            text-indent: 0;
+        }
     }
 }

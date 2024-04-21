@@ -13,9 +13,8 @@
             {{> body }}
         </main>
         {{> footer }}
-
     </div>
-    <script src="assets/js/app.js"></script>
+    <!-- <script src="assets/js/app.js"></script> -->
     <script>
         function toggleAccordion(header) {
             var content = header.nextElementSibling;
@@ -24,6 +23,77 @@
             content.style.display = content.style.display === 'block' ? 'none' : 'block';
             icon.classList.toggle('active');
             container.classList.toggle('active');
+        }
+        const swipeContainer = document.getElementById('swipeContainer');
+        let startX, currentX;
+
+        swipeContainer.addEventListener('mousedown', startSwipe);
+        swipeContainer.addEventListener('touchstart', startSwipe);
+
+        function startSwipe(event) {
+            event.preventDefault();
+            startX = event.clientX || event.touches[0].clientX;
+            swipeContainer.addEventListener('mousemove', swipe);
+            swipeContainer.addEventListener('touchmove', swipe);
+            swipeContainer.addEventListener('mouseup', endSwipe);
+            swipeContainer.addEventListener('touchend', endSwipe);
+        }
+
+        function swipe(event) {
+            currentX = event.clientX || event.touches[0].clientX;
+            const diffX = currentX - startX;
+            swipeContainer.style.transform = `translateX(calc(-50% + ${diffX}px))`;
+        }
+
+        function endSwipe() {
+            swipeContainer.removeEventListener('mousemove', swipe);
+            swipeContainer.removeEventListener('touchmove', swipe);
+            swipeContainer.removeEventListener('mouseup', endSwipe);
+            swipeContainer.removeEventListener('touchend', endSwipe);
+        }
+    </script>
+    <script>
+        // то что можно в файл
+        //анимация svg
+        const circuls = document.querySelectorAll('.calculator__circul');
+        const numbers = document.querySelectorAll('.calculator__numbers');
+        // стоимость за единицу глубины
+        const perDepth = document.querySelector('[data-perone]');
+        const result = document.querySelector('[data-calc]');
+        let flag = true;
+
+        if (!perDepth.textContent) {
+            alert('калькулятор не может работать без данных');
+            flag = false;
+        }
+        if (flag) {
+            circuls.forEach((circul, index) => {
+                circul.addEventListener('mouseenter', () => {
+                    circul.classList.add('active');
+                    numbers[index].classList.add('active');
+                });
+
+                circul.addEventListener('mouseleave', () => {
+                    circul.classList.remove('active');
+                    numbers[index].classList.remove('active');
+                });
+            });
+            // input range - калькулятор 
+
+            // Получаем элементы DOM
+            const numberInput = document.getElementById('numberInput');
+            const rangeInput = document.getElementById('rangeInput');
+
+            rangeInput.addEventListener('change', () => {
+                numberInput.value = rangeInput.value;
+                result.textContent = numberInput.value * parseInt(perDepth.textContent);
+            })
+
+            numberInput.addEventListener('input', () => {
+                rangeInput.value = numberInput.value;
+                result.textContent = rangeInput.value * parseInt(perDepth.textContent);
+            })
+
         }
 
     </script>

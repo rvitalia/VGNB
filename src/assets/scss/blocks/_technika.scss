@@ -4,6 +4,13 @@
 
     &>li {
         border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+
+        @include tablet {
+            display: flex !important;
+            flex-direction: column;
+            gap: 40px !important;
+            padding-bottom: 140px !important;
+        }
     }
 }
 
@@ -48,24 +55,34 @@
 .technika__inner__info {
     & strong {
         font-family: var(--second-family);
-        font-size: 24px;
+        font-size: clamp(20px, 4vw, 24px);
         line-height: 292%;
         letter-spacing: 0.02em;
     }
 
     & p {
-        font-size: 20px;
+        font-size: clamp(18px, 4vw, 20px);
         line-height: 190%;
         margin-bottom: 0;
+        
+        @include small-tablet {
+            line-height: 1.5;
+        }
     }
-
+    
     & ul {
         list-style: disc;
-        font-size: 20px;
+        font-size: clamp(18px, 4vw, 20px);
         line-height: 190%;
         margin: 0;
         padding-top: 0;
         padding-bottom: 0;
+
+        @include small-tablet {
+            line-height: 1.5;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
     }
 
     & button {
@@ -76,6 +93,12 @@
         align-items: center;
         margin: 20px 0;
         cursor: pointer;
+
+        @include small-tablet{
+            & strong{
+                line-height: 1.5;
+            }
+        }
     }
 }
 
@@ -85,6 +108,10 @@
     padding: 60px;
     width: 100%;
 
+    @include mobile{
+        padding: 10px;
+    }
+
     & th,
     & td {
         padding: 15px 0;
@@ -92,46 +119,54 @@
 
     & th {
         font-family: var(--third-family);
-        font-size: 20px;
+        font-size: clamp(14px, 4vw, 20px);
         line-height: 190%;
         color: #000;
         font-weight: 600;
         border-bottom: 1px solid var(--accent-color);
         border-right: 1px solid var(--accent-color);
 
-        &:last-child{
+        &:last-child {
             border-right-color: transparent;
         }
 
-        &:not(:first-child){
+        &:not(:first-child) {
             padding-left: 10px;
+
+            @include mobile{
+                padding-left: 5px;
+            }
         }
     }
-    
+
     & tr {
-        
-        &:last-child{
-            & td{
+
+        &:last-child {
+            & td {
                 border-bottom: 1px solid transparent;
             }
         }
-        
+
         & td:first-child {
             font-weight: 600;
         }
-        
+
         & td {
             font-weight: 400;
-            font-size: 20px;
+            font-size: clamp(14px, 4vw, 20px);
             line-height: 190%;
             border-bottom: 1px solid var(--accent-color);
             border-right: 1px solid var(--accent-color);
-      
-            &:not(:first-child){
+
+            &:not(:first-child) {
                 padding-left: 10px;
+
+                @include mobile{
+                    padding-left: 5px;
+                }
             }
-            
-            &:last-child{
+
+            &:last-child {
                 border-right-color: transparent;
             }
         }
@@ -150,10 +185,11 @@
     visibility: visible;
     opacity: 1;
 }
-.toggleTable.animation{
+
+.toggleTable.animation {
     transform: rotateX(0deg);
 }
 
-.none{
+.none {
     display: none;
 }

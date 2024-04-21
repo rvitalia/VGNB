@@ -1,13 +1,46 @@
 .services {
     background: #EEECE8;
-    padding-bottom: 110px;
+    padding-bottom: clamp(40px, 10vw, 110px);
 }
 
 .services__inner {
     padding: 60px 0;
+
+    @include tablet{
+        flex-direction: column;
+        align-items: center;
+
+        & .services__inner__item{
+            flex-direction: row !important;
+            gap: 30px;
+            
+            @include mobile{
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+    }
+
+    @include small-tablet{
+        gap: 20px !important;
+    }
 }
 
 .services__inner__item {
+    &.--big{
+        @include small-tablet{
+            width: 100%;
+            max-width: 436px;
+            margin-left: auto;
+            margin-right: auto;
+            & img{
+                max-width: 436px;
+                max-height: 439px;
+                width: 100%;
+            }
+        }
+    }
+
     &>img {
         backdrop-filter: blur(6px);
         background: rgba(59, 58, 57, 0.9);
@@ -16,38 +49,36 @@
 
     &.--big h3 {
         position: absolute;
-        left: 60px;
-        bottom: 180px;
+        left: clamp(10px, 5vw, 60px);
+        bottom: clamp(100px, 10vw, 180px);
         z-index: 2;
-        font-weight: 600;
-        font-size: 32px;
         line-height: 119%;
         color: #fff;
     }
 
     &.--big .services__inner__item__link {
         position: absolute;
-        bottom: 100px;
-        left: 60px;
+        bottom: clamp(20px, 5vw, 100px);
+        left: clamp(10px,  5vw, 60px);
         z-index: 1;
 
     }
 
     & h3 {
         font-weight: 600;
-        font-size: 20px;
-        line-height: 190%;
+        font-size: clamp(16px, 4vw, 20px);
+        line-height: clamp(130%, 5vw, 190%);
         color: #fff;
         position: absolute;
-        left: 40px;
-        bottom: 120px;
+        left: clamp(10px, 4vw, 40px);
+        bottom: clamp(70px, 8vw, 120px);
         z-index: 1;
     }
 
     & .services__inner__item__link {
         position: absolute;
-        bottom: 46px;
-        left: 40px;
+        bottom: clamp(15px, 3vw, 46px);
+        left: clamp(10px, 3vw, 40px);
         z-index: 1;
     }
 }

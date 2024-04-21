@@ -8,7 +8,7 @@
 
     & h1 {
         font-family: var(--second-family);
-        font-size: 50px;
+        font-size: clamp(32px,5vw,50px);;
         line-height: 130%;
         letter-spacing: 0.02em;
         text-transform: uppercase;
@@ -17,7 +17,7 @@
     }
 
     & p {
-        font-size: 28px;
+        font-size: clamp(20px, 4.8vw, 28px);
         line-height: 136%;
         color: #fff;
         max-width: 900px;
