@@ -51,22 +51,22 @@ html,body{
 // end first page
 
 //second page
-// @import 'blocks/ahero';
-// @import 'blocks/includes';
-// @import 'blocks/teams';
-// @import 'blocks/aadventages';
+@import 'blocks/ahero';
+@import 'blocks/includes';
+@import 'blocks/teams';
+@import 'blocks/aadventages';
 //конец второй страницы
 //вакансии
-// @import 'blocks/ahero';
-// @import 'blocks/vabout';
-// @import 'blocks/questions';
-// @import 'blocks/vaclist';
+@import 'blocks/ahero';
+@import 'blocks/vabout';
+@import 'blocks/questions';
+@import 'blocks/vaclist';
 // @import 'blocks/order';
 //конец вакансий
 
 //спецтехника
-// @import 'blocks/shero';
-// @import 'blocks/technika';
+@import 'blocks/shero';
+@import 'blocks/technika';
 //конец спецтехники
 
 @import 'blocks/footer';
