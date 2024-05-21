@@ -4,7 +4,7 @@
 // @import "./vendor/animate";
 
 
-// @import 'fonts';
+@import 'fonts';
 @import 'settings';
 
 
@@ -15,11 +15,21 @@ html,body{
    color: #fff;
    font-weight: 400;
    font-size: 16px;
+   position: relative;
+   z-index: 1;
+}
+.canvas{
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
 }
 
 .main{
   height: 100%;
-  flex: 1 0 auto; 
+  flex: 1 0 auto;
+  position: relative;
+  z-index: 3; 
 }
 
 // ======blocks=========
@@ -41,22 +51,22 @@ html,body{
 // end first page
 
 //second page
-@import 'blocks/ahero';
-@import 'blocks/includes';
-@import 'blocks/teams';
-@import 'blocks/aadventages';
+// @import 'blocks/ahero';
+// @import 'blocks/includes';
+// @import 'blocks/teams';
+// @import 'blocks/aadventages';
 //конец второй страницы
 //вакансии
-@import 'blocks/ahero';
-@import 'blocks/vabout';
-@import 'blocks/questions';
-@import 'blocks/vaclist';
-@import 'blocks/order';
+// @import 'blocks/ahero';
+// @import 'blocks/vabout';
+// @import 'blocks/questions';
+// @import 'blocks/vaclist';
+// @import 'blocks/order';
 //конец вакансий
 
 //спецтехника
-@import 'blocks/shero';
-@import 'blocks/technika';
+// @import 'blocks/shero';
+// @import 'blocks/technika';
 //конец спецтехники
 
 @import 'blocks/footer';
